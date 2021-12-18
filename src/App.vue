@@ -7,7 +7,7 @@ export default {
    data() {
       return {
          header: "Sign up for giveaway",
-         text: "Grap your swag",
+         text: "log is fun",
          showModel: false
       }
    },
