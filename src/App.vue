@@ -1,35 +1,24 @@
 <script>
-import Model from './components/Model.vue'
+import CardButton from './components/CardButton.vue'
 export default {
    components: {
-      Model
+      CardButton
    },
    data() {
       return {
-         header: "Sign up for giveaway",
-         text: "log is fun",
-         showModel: false
       }
    },
    methods: {
-      toggleModel() {
-         this.showModel = !this.showModel
-      }
    }
 }
 </script>
-
 <template>
    <h1>Hello Vue</h1>
-   <Model v-show="showModel" :header="header" :text="text" theme="sale" @close="toggleModel" />
-   <button @click="toggleModel">openModel</button>
+   <CardButton />
 </template>
 
 <style>
-#app {
-   font-family: Avenir, Helvetica, Arial, sans-serif;
-   -webkit-font-smoothing: antialiased;
-   text-align: center;
-   color: #243343;
+h1 {
+   font-family: "Fira Sans", sans-serif;
 }
 </style>
