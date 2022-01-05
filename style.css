@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300&display=swap');
+:root{
+   --primary:#91C0FF;
+   --secondery:#fff;
+   }
 *{
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+}
+#app{
+  background:var(--primary);
+  height: fit-content;
+  padding: 9px;
 }

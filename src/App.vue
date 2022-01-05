@@ -1,24 +1,27 @@
 <script>
-import CardButton from './components/CardButton.vue'
+import Card from './components/Card.vue'
 export default {
    components: {
-      CardButton
-   },
-   data() {
-      return {
-      }
-   },
-   methods: {
+      Card
    }
 }
 </script>
 <template>
-   <h1>Hello Vue</h1>
-   <CardButton />
+   <Card></Card>
+   <Card card-width="30rem" card-height="20rem"></Card>
 </template>
 
 <style>
-h1 {
+#app > h1 {
    font-family: "Fira Sans", sans-serif;
+}
+.shape {
+   width: 7rem;
+   height: 7rem;
+   border-radius: 50%;
+   background: var(--gradient);
+   position: absolute;
+   top: 0.5rem;
+   left: 0.5rem;
 }
 </style>
