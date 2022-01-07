@@ -1,27 +1,22 @@
 <script>
 import Card from './components/Card.vue'
+import Sidebar from './components/Sidebar.vue'
 export default {
    components: {
-      Card
+      Card,
+      Sidebar
    }
 }
 </script>
 <template>
+   <Sidebar />
    <Card></Card>
    <Card card-width="30rem" card-height="20rem"></Card>
 </template>
 
 <style>
 #app > h1 {
-   font-family: "Fira Sans", sans-serif;
-}
-.shape {
-   width: 7rem;
-   height: 7rem;
-   border-radius: 50%;
-   background: var(--gradient);
-   position: absolute;
-   top: 0.5rem;
-   left: 0.5rem;
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 </style>
