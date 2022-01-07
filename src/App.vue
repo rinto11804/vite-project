@@ -11,7 +11,6 @@ export default {
 <template>
    <Sidebar />
    <Card></Card>
-   <Card card-width="30rem" card-height="20rem"></Card>
 </template>
 
 <style>
