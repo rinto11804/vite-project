@@ -6,10 +6,11 @@
 }
 *{
    margin: 0;
-   padding: 0;
+  padding: 0;
    box-sizing: border-box;
 }
 #app{
+   display: grid;
+   place-items: center;
    background-color: var(--body-background);
-  height: fit-content;
 }

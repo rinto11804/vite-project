@@ -26,11 +26,13 @@ export default {
 
 
 <style>
+:root {
+   --box-shadow-1: rbga(145, 192, 255, 0.5);
+}
 #app > .card {
    width: 20rem;
    height: 30rem;
    margin-bottom: 3rem;
-   margin-inline: 12rem;
    backdrop-filter: blur(8px);
    background-color: #fff;
    border-radius: 26px;

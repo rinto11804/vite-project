@@ -21,41 +21,37 @@ export default {
 
 
 <style>
+nav {
+   position: sticky;
+   width: 100%;
+   display: grid;
+   z-index: 1;
+   grid-template-columns: 1fr 0.5fr;
+   align-items: center;
+   background-color: var(--sidebar-bg-dark);
+   padding: 1rem;
+   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+}
 nav > h1 {
-   margin-bottom: 5rem;
+   color: white;
+   text-transform: uppercase;
+   letter-spacing: 2px;
 }
 nav > ul > li {
-   display: flex;
-   flex: 1;
-   flex-direction: column;
-   justify-content: space-evenly;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   background-color: var(--sidebar-bg-dark);
+   grid-gap: 0.3rem;
 }
-li > a {
-   padding: 1rem;
+nav > ul > li > a {
+   text-decoration: none;
+   width: fit-content;
+   padding: 0.6em;
+   border-radius: 5px;
    background-color: var(--sidebar-bg-light);
-   margin-bottom: 0.5rem;
-}
-li > a:hover {
-   padding: 1rem;
-   background-color: var(--sidebar-bg-dark);
-   margin: 0.1rem;
-}
-nav {
    color: white;
-   background-color: var(--sidebar-bg-dark);
-   float: left;
-   width: -2rem;
-   position: fixed;
-   z-index: 1;
-   top: 0;
-   left: 0;
-   bottom: 0;
-   padding: 0.5em;
-   transition: 0.3s ease;
-   display: flex;
-   flex-direction: column;
-}
-nav :hover {
-   width: 15rem;
+   font-weight: 200;
+   letter-spacing: 0.1rem;
 }
 </style>
