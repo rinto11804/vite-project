@@ -1,8 +1,8 @@
 :root{
-   --body-background:#FFD8D8;
-   --sidebar-bg-dark:#E36C6C;
-   --sidebar-bg-light:#F98484;
-   --secondary:#552D2D;
+   --body-background:#f2f8ff;
+   --primary:#cae1ff;
+   --secondary:#231e40;
+   --navbar-back:#bbd9ff5c;
 }
 *{
    margin: 0;

@@ -3,11 +3,9 @@ export default {
    props: {
       cardWidth: {
          type: String,
-         default: '20rem'
       },
       cardHeight: {
          type: String,
-         default: '30rem'
       }
 
    },
@@ -26,9 +24,6 @@ export default {
 
 
 <style>
-:root {
-   --box-shadow-1: rbga(145, 192, 255, 0.5);
-}
 #app > .card {
    width: 20rem;
    height: 30rem;
