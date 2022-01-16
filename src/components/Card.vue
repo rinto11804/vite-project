@@ -8,10 +8,6 @@ export default {
          type: String,
       }
 
-   },
-   setup() {
-      return {
-      }
    }
 }
 </script>
