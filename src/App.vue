@@ -2,7 +2,7 @@
 import Card from './components/Card.vue'
 import Navbar from './components/Navbar.vue'
 import Model from './components/Model.vue'
-import {ref} from 'vue';
+import {ref, onMounted} from 'vue';
 export default {
    components: {
       Card,
@@ -13,20 +13,23 @@ export default {
       const results = ref(null);
       let modelShow = ref(false);
       let currentSlide = ref('joyful');
-      let currentCard = currentSlide.value;
-      fetch(`https://demo1api.herokuapp.com/api/pray/${currentCard}`)
-         .then(res => res.json())
-         .then(data => results.value = data)
+      const getData = async () => {
+         const res = await fetch(`https://demo1api.herokuapp.com/api/pray/${currentSlide.value}`);
+         const data = await res.json();
+         results.value = data;
+      }
       const openModel = () => {
          modelShow.value = !modelShow.value
       }
+      onMounted(getData)
       return {results, modelShow, openModel, currentSlide}
    }
 }
 </script>
 <template>
-   <Navbar @click="openModel">
+   <Navbar>
       <svg
+         @click="openModel"
          class="menu"
          xmlns="http://www.w3.org/2000/svg"
          width="24"
@@ -37,21 +40,13 @@ export default {
          <path d="M4 6h16v2H4zm4 5h12v2H8zm5 5h7v2h-7z" />
       </svg>
    </Navbar>
-   <h3>{{results[0].cardTitle}}</h3>
-   <Card v-for="joy in results">
-      <h1>{{joy.cardNum}}</h1>
-      <p>{{joy.para1}}</p>
-      <br />
-      <p>{{joy.para2}}</p>
-   </Card>
+   <router-view></router-view>
    <transition name="bounce">
       <Model v-show="modelShow" @close="openModel">
          <ul>
             <li>
-               <a href="#">Home</a>
-               <a href="#">Works</a>
-               <a href="#">About</a>
-               <a href="#">Contact</a>
+               <router-link to="/">Home</router-link>
+               <router-link to="/joyful">Joyful</router-link>
             </li>
          </ul>
       </Model>
@@ -83,20 +78,20 @@ export default {
    font-weight: bold;
 }
 .bounce-enter-active {
-   animation: bounce-in 0.5s;
+   animation: bounce-in 0.3s;
 }
 .bounce-leave-active {
-   animation: bounce-in 0.5s reverse;
+   animation: bounce-in 0.3s reverse;
 }
 @keyframes bounce-in {
    0% {
-      transform: scale(0);
+      opacity: 0;
+      transform: translateY(-40px);
    }
-   50% {
-      transform: scale(1.2);
-   }
+
    100% {
-      transform: scale(1);
+      opacity: 1;
+      transform: translateY(0);
    }
 }
 </style>
