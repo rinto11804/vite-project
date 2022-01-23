@@ -1,28 +1,26 @@
 <script>
-import Card from './components/Card.vue'
 import Navbar from './components/Navbar.vue'
 import Model from './components/Model.vue'
 import {ref, onMounted} from 'vue';
 export default {
    components: {
-      Card,
       Navbar,
       Model
    },
    setup() {
-      const results = ref(null);
+       /*const results = ref(null);*/
       let modelShow = ref(false);
-      let currentSlide = ref('joyful');
-      const getData = async () => {
-         const res = await fetch(`https://demo1api.herokuapp.com/api/pray/${currentSlide.value}`);
-         const data = await res.json();
-         results.value = data;
-      }
+      /* let currentSlide = ref('joyful');
+       const getData = async () => {
+       const res = await fetch(`https://demo1api.herokuapp.com/api/pray/${currentSlide.value}`);
+       const data = await res.json();
+       results.value = data;
+       }
+      onMounted(getData)*/
       const openModel = () => {
          modelShow.value = !modelShow.value
       }
-      onMounted(getData)
-      return {results, modelShow, openModel, currentSlide}
+      return {modelShow, openModel}
    }
 }
 </script>
@@ -41,7 +39,7 @@ export default {
       </svg>
    </Navbar>
    <router-view></router-view>
-   <transition name="bounce">
+   <transition name="raise">
       <Model v-show="modelShow" @close="openModel">
          <ul>
             <li>
@@ -77,13 +75,13 @@ export default {
       "Lucida Sans", Arial, sans-serif;
    font-weight: bold;
 }
-.bounce-enter-active {
-   animation: bounce-in 0.3s;
+.raise-enter-active {
+   animation: raise-in 0.4s;
 }
-.bounce-leave-active {
-   animation: bounce-in 0.3s reverse;
+.raise-leave-active {
+   animation: raise-in 0.4s reverse;
 }
-@keyframes bounce-in {
+@keyframes raise-in {
    0% {
       opacity: 0;
       transform: translateY(-40px);
@@ -91,7 +89,7 @@ export default {
 
    100% {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0px);
    }
 }
 </style>

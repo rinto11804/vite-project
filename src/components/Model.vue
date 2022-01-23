@@ -1,5 +1,5 @@
 <template>
-   <div class="backdrop">
+   <div class="backdrop" @click.self="closeModel">
       <div class="model">
          <svg
             xmlns="http://www.w3.org/2000/svg"
