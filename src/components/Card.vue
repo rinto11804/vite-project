@@ -1,15 +1,8 @@
-<script>
-export default {
-   props: {
-      cardWidth: {
-         type: String,
-      },
-      cardHeight: {
-         type: String,
-      }
-
-   }
-}
+<script setup>
+defineProps({
+   cardWidth: String,
+   cardHeight: String
+})
 </script>
 
 <template>

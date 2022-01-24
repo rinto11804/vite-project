@@ -3,13 +3,12 @@
    <MainBody />
 </template>
 
-<script>
+<script setup>
+import {defineComponent} from "vue";
 import MainBody from "../components/MainBody.vue";
-export default {
-   components: {
-      MainBody
-   }
-}
+defineComponent({
+   MainBody
+})
 </script>
 
 <style>

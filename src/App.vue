@@ -1,29 +1,18 @@
-<script>
-import Navbar from './components/Navbar.vue'
-import Model from './components/Model.vue'
-import {ref, onMounted} from 'vue';
-export default {
-   components: {
-      Navbar,
-      Model
-   },
-   setup() {
-       /*const results = ref(null);*/
-      let modelShow = ref(false);
-      /* let currentSlide = ref('joyful');
-       const getData = async () => {
-       const res = await fetch(`https://demo1api.herokuapp.com/api/pray/${currentSlide.value}`);
-       const data = await res.json();
-       results.value = data;
-       }
-      onMounted(getData)*/
-      const openModel = () => {
-         modelShow.value = !modelShow.value
-      }
-      return {modelShow, openModel}
-   }
+<script setup>
+import Navbar from './components/Navbar.vue';
+import Model from './components/Model.vue';
+import {ref, defineComponent} from 'vue';
+
+defineComponent({
+   Navbar,
+   Model
+});
+let modelShow = ref(false);
+function openModel() {
+   modelShow.value = !modelShow.value
 }
 </script>
+
 <template>
    <Navbar>
       <svg

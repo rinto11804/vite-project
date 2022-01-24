@@ -1,15 +1,17 @@
-<script>
+<script setup>
+import {defineComponent} from 'vue';
 import Card from '../components/Card.vue'
 import CardButton from '../components/CardButton.vue'
-export default {
-   components: {Card, CardButton},
-}
+defineComponent({
+   Card,
+   CardButton
+})
 </script>
 
 <template>
    <Card>
       <CardButton />
-   </Card> 
+   </Card>
 </template>
 
 <style>

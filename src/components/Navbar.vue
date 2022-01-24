@@ -1,9 +1,5 @@
 <script>
-export default {
-
-}
 </script>
-
 
 <template>
    <nav>
@@ -11,7 +7,6 @@ export default {
       <slot />
    </nav>
 </template>
-
 
 <style>
 nav {
