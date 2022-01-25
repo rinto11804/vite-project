@@ -1,12 +1,8 @@
 <script setup>
-defineProps({
-   cardWidth: String,
-   cardHeight: String
-})
 </script>
 
 <template>
-   <div class="card" :style="{width: cardWidth}">
+   <div class="card">
       <slot />
    </div>
 </template>

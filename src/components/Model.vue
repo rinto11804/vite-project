@@ -1,6 +1,5 @@
 <script setup>
-import {defineEmits} from 'vue'
-const emit = defineEmits("close")
+const emit = defineEmits(["close"])
 function closeModel() {
    emit("close")
 }

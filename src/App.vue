@@ -1,12 +1,8 @@
 <script setup>
 import Navbar from './components/Navbar.vue';
 import Model from './components/Model.vue';
-import {ref, defineComponent} from 'vue';
+import {ref} from 'vue';
 
-defineComponent({
-   Navbar,
-   Model
-});
 let modelShow = ref(false);
 function openModel() {
    modelShow.value = !modelShow.value
