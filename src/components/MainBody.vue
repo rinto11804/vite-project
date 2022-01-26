@@ -11,19 +11,49 @@ defineProps({
 <template>
    <FetchData :url="endpoint" v-slot="{res, loading}">
       <Loading v-if="loading" />
-      <template v-if="res" v-for="result in res" :key="result.id">
+      <template v-if="res" v-for="(result,idx) in res" :key="idx">
          <Card>
             <h4>{{result.cardTitle}}</h4>
-            <h1>{{result.cardNum}}</h1>
-            <card-button />
+            <div class="card_main">
+               <h1>{{idx + 1}}</h1>
+               <img :src="result.imageUrl"/>
+               <card-button />
+            </div>
             <p>{{result.para1}}</p>
-            <br />
             <p>{{result.para2}}</p>
+            <p>{{result.lower_end}}</p>
          </Card>
       </template>
    </FetchData>
 </template>
 
 <style>
+.card > h4{
+   font-size:1.2rem;
+   margin-bottom:1rem;
+}
+.card_main > h1{
+   font-size:2.3rem;
+}
+.card_main{
+   display:flex;
+   gap:3rem;
+   margin-bottom:1rem;
+   flex-direction:row;
+   justify-content:center;
+}
+.card_main >img {
+    border-radius: 10px;
+    object-fit: fill;
+    width: 12rem;
+    height: 14rem;
+}
+.card >p{
+   font-size:0.9rem;
+   font-weight:700;
+   margin-bottom:0.6rem;
+   width:23rem;
+   text-align:center;
+}
 </style>
 
