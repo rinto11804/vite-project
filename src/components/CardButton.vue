@@ -19,7 +19,7 @@ const Increment = () => {
    border-radius: 50%;
    background-color: var(--secondary);
    border: none;
-   box-shadow: 2px 2px 10px #2e2e22f1;
+   box-shadow: 3px 4px 8px #292925b0;
    color: white;
    font-size: 1.5rem;
    font-weight: 600;
