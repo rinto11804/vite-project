@@ -19,6 +19,7 @@ nav {
    background-color: var(--navbar-back);
    backdrop-filter: blur(20px);
    padding: 1rem;
+   margin-bottom: 1rem;
    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
    z-index: 10;
