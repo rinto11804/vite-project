@@ -33,7 +33,7 @@
    z-index: 9;
    width: 100%;
    height: 100%;
-   background-color: #6a9fb875;
+   background-color: #aaceebb5;
 }
 .loading_loader > svg {
    animation: rise 3s cubic-bezier(0.52, 0.47, 0.09, 1.04) infinite;

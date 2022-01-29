@@ -14,7 +14,7 @@
    display: grid;
    font-family: "Fira Sans", sans-serif;
    place-items: center;
-   width: 24rem;
+   width: 23rem;
    min-height: 34rem;
    height: fit-content;
    padding-bottom: 2rem;

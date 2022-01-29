@@ -10,8 +10,8 @@ defineProps({
 
 <template>
    <FetchData :url="endpoint" v-slot="{res, loading}">
-      <Loading v-if="loading" />
-      <template v-if="res" v-for="(result,idx) in res" :key="idx">
+      <Loading v-show="loading" />
+      <template v-show="res" v-for="(result,idx) in res" :key="idx">
          <Card>
             <h4>{{result.cardTitle}}</h4>
             <div class="card_main">
@@ -52,7 +52,7 @@ defineProps({
    font-size: 0.72rem;
    font-weight: 700;
    margin-bottom: 0.6rem;
-   width: 23rem;
+   width: 19rem;
    text-align: center;
 }
 </style>
