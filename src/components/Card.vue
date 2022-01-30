@@ -19,7 +19,7 @@
    height: fit-content;
    padding-bottom: 2rem;
    padding-top: 1rem;
-   margin-bottom: 3rem;
+   margin: 0.5rem;
    backdrop-filter: blur(8px);
    background-color: #fff;
    border-radius: 26px;

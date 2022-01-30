@@ -30,6 +30,7 @@ function openModel() {
             <li>
                <router-link to="/">Home</router-link>
                <router-link to="/joyful">Joyful</router-link>
+               <router-link to="/sorrowful">Sorrowful</router-link>
             </li>
          </ul>
       </Model>

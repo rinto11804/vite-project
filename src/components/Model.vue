@@ -23,7 +23,7 @@ function closeModel() {
    width: 100%;
    height: 100%;
    backdrop-filter: blur(4px);
-   background-color: #66666652;
+   background-color: #ffffff0f;
 }
 .model {
    width: clamp(10rem, 16rem, 20rem);

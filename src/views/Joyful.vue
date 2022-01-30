@@ -1,10 +1,8 @@
 <script setup>
-import MainBody from "../components/MainBody.vue";
+import Mysteries from "../components/Mysteries.vue";
 </script>
 
 <template>
-   <MainBody endpoint="joyful" />
+   <Mysteries endpoint="joyful" />
 </template>
 
-<style>
-</style>
