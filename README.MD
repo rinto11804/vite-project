@@ -1,1 +1,1 @@
-the site is live  [here](https://vite-demo.netlify.app)
+the site is live  [here](https://rosary-in-malayalam.netlify.app)
